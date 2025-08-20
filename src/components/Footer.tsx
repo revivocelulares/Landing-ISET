@@ -1,28 +1,24 @@
 import React from 'react';
-import { GraduationCap, Facebook, Twitter, Instagram, Linkedin, Youtube } from 'lucide-react';
+import { Facebook, Twitter, Instagram } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gray-900 text-white">
+    <footer className="bg-azure-500 text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-          {/* Company Info */}
+          {/* Ministerio de Educación Logo */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 bg-gradient-to-r from-azure-200 to-azure-300 rounded-lg flex items-center justify-center">
-                <GraduationCap className="w-5 h-5 text-white" />
-              </div>
-              <span className="text-xl font-bold">EduPlatform</span>
+            <div className="flex justify-center md:justify-start">
+              <img 
+                src="./images/ministerio-de-educación-logo.png" 
+                alt="Ministerio de Educación" 
+                className="h-24 w-auto object-contain"
+              />
             </div>
-            <p className="text-gray-400 leading-relaxed">
-              Empowering students worldwide with quality education and personalized learning experiences.
-            </p>
-            <div className="flex space-x-4">
-              <Facebook className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
-              <Twitter className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
-              <Instagram className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
-              <Linkedin className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
-              <Youtube className="w-5 h-5 text-gray-400 hover:text-white cursor-pointer transition-colors" />
+            <div className="flex justify-center md:justify-start space-x-4">
+              <Facebook className="w-5 h-5 text-gray-400 hover:text-blue-600 cursor-pointer transition-colors" />
+              <Twitter className="w-5 h-5 text-gray-400 hover:text-blue-400 cursor-pointer transition-colors" />
+              <Instagram className="w-5 h-5 text-gray-400 hover:text-pink-600 cursor-pointer transition-colors" />
             </div>
           </div>
 

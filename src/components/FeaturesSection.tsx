@@ -5,18 +5,18 @@ const FeaturesSection: React.FC = () => {
   const features = [
     {
       icon: MapPin,
-      title: "One Stop Study Solution",
-      description: "Comprehensive program covering every aspect to develop your academic excellence. Access books, study materials, tests, and personalized guidance all in one place."
+      title: "Solución Integral de Estudios",
+      description: "Programa integral que cubre todos los aspectos para desarrollar tu excelencia académica. Accede a libros, materiales de estudio, evaluaciones y orientación personalizada en un solo lugar."
     },
     {
       icon: Users,
-      title: "Our Is Our Destination",
-      description: "Connecting students through our strong network of the worldwide mentors and counselors, ensuring to support students throughout their academic journey."
+      title: "Nuestro Compromiso es tu Destino",
+      description: "Conectamos estudiantes a través de nuestra sólida red de mentores y nuestrosconsejeros institucionales, asegurando el apoyo a los estudiantes durante todo su recorrido académico."
     },
     {
       icon: Headphones,
-      title: "End To End Support",
-      description: "Comprehensive support through every step of your learning journey. From enrollment to graduation, our dedicated support team is here to help."
+      title: "Soporte Integral",
+      description: "Apoyo integral en cada paso de tu proceso de aprendizaje. Desde la inscripción hasta la graduación, nuestro equipo de soporte dedicado está aquí para ayudarte."
     }
   ];
 

@@ -21,9 +21,9 @@ const HeroSection: React.FC = () => {
                 <span className="text-azure-400">Tecnológica "Ing. Estela Miguel"</span>
               </h1>
               
-              <p className="text-lg text-gray-600 max-w-lg leading-relaxed">
-                We help students achieve their academic goals with personalized learning paths, 
-                expert guidance, and comprehensive support throughout their educational journey.
+              <p className="text-wrap break-words text-lg text-gray-600 max-w-lg leading-relaxed">
+                Este es un centro técnico público de nivel superior no universitario en Comodoro Rivadavia, 
+                que brinda variadas tecnicaturas de alto nivel y validez nacional con fuerte orientación profesional.
               </p>
             </div>
 
@@ -31,10 +31,6 @@ const HeroSection: React.FC = () => {
               <Link to="academic-offer" className="bg-gradient-to-r from-azure-200 to-azure-300 text-white px-8 py-4 rounded-full text-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200">
                 Oferta Académica
               </Link>
-              {/*<button className="flex items-center space-x-2 text-gray-700 hover:text-azure-400 px-8 py-4 rounded-full border border-gray-300 hover:border-azure-300 transition-all duration-200">
-                <Play className="w-5 h-5" />
-                <span className="font-semibold">Watch Tour</span>
-              </button>*/}
             </div>
           </div>
 

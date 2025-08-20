@@ -30,13 +30,10 @@ const AboutSection: React.FC = () => {
                 SOBRE NOSOTROS
               </h2>
               <p className="text-gray-600 leading-relaxed mb-6">
-                We provide comprehensive educational solutions designed to help students achieve their academic goals. 
-                Our experienced team of educators and counselors work together to create personalized learning experiences 
-                that cater to individual needs and learning styles.
+                El Instituto Superior de Educación Técnica N.º 812 “Ingeniera Estela M. Miguel”, con sede en Comodoro Rivadavia, es una institución pública de nivel superior dedicada a la formación técnica y profesional. Nuestra misión es brindar educación de calidad, con títulos de validez nacional y una fuerte orientación al desarrollo de competencias prácticas.
               </p>
               <p className="text-gray-600 leading-relaxed">
-                With years of experience in the education industry, we understand what it takes to succeed. 
-                Our proven methodology and dedicated support system have helped thousands of students reach their potential.
+                A lo largo de los años, nos hemos consolidado como un referente regional en la preparación de técnicos capaces de responder a las demandas del mundo laboral. Llevamos el nombre de la Ingeniera Estela María Miguel, en homenaje a su trayectoria educativa y compromiso con la comunidad.
               </p>
             </div>
 
@@ -57,7 +54,7 @@ const AboutSection: React.FC = () => {
             </div>
 
             <button className="bg-gradient-to-r from-azure-200 to-azure-300 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200">
-              Learn More About Us
+              Lea más Sobre Nosotros
             </button>
           </div>
         </div>

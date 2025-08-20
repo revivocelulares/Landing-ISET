@@ -1,61 +1,32 @@
 import React from 'react';
 import { Star, Users } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const CoursesSection: React.FC = () => {
   const courses = [
     {
       id: 1,
-      title: "Course Name",
-      category: "Programming",
-      image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800",
+      title: "Tecnicatura Superior en Energías Renovables",
+      category: "Gestión de Proyectos",
+      image: "https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=800",
       rating: 4.8,
       students: 1234,
-      price: "$99"
     },
     {
       id: 2,
-      title: "Course Name",
-      category: "Design",
-      image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800",
+      title: "Tecnicatura Superior en Producción Industrial de Alimentos",
+      category: "Desarrollo de Productos",
+      image: "https://images.pexels.com/photos/5591663/pexels-photo-5591663.jpeg?auto=compress&cs=tinysrgb&w=800",
       rating: 4.9,
       students: 856,
-      price: "$79"
     },
     {
       id: 3,
-      title: "Course Name",
-      category: "Business",
-      image: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800",
+      title: "Tecnicatura Superior en Mantenimiento Industrial",
+      category: "Gestión de Equipos",
+      image: "https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=800",
       rating: 4.7,
       students: 2341,
-      price: "$129"
-    },
-    {
-      id: 4,
-      title: "Course Name",
-      category: "Marketing",
-      image: "https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=800",
-      rating: 4.6,
-      students: 987,
-      price: "$89"
-    },
-    {
-      id: 5,
-      title: "Course Name",
-      category: "Photography",
-      image: "https://images.pexels.com/photos/3184394/pexels-photo-3184394.jpeg?auto=compress&cs=tinysrgb&w=800",
-      rating: 4.8,
-      students: 654,
-      price: "$69"
-    },
-    {
-      id: 6,
-      title: "Course Name",
-      category: "Writing",
-      image: "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=800",
-      rating: 4.7,
-      students: 432,
-      price: "$59"
     }
   ];
 
@@ -64,9 +35,9 @@ const CoursesSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Transform your life through
+            Transformá tu vida
           </h2>
-          <h3 className="text-4xl font-bold text-azure-400">education</h3>
+          <h3 className="text-4xl font-bold text-azure-400">con Educación</h3>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -82,7 +53,7 @@ const CoursesSection: React.FC = () => {
               <div className="p-6">
                 <div className="flex items-center justify-between mb-2">
                   <span className="text-sm text-azure-400 font-medium">{course.category}</span>
-                  <span className="text-lg font-bold text-gray-900">{course.price}</span>
+                  <span className="text-lg font-bold text-gray-900">{}</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">{course.title}</h3>
                 <div className="flex items-center justify-between text-sm text-gray-600">
@@ -92,12 +63,21 @@ const CoursesSection: React.FC = () => {
                   </div>
                   <div className="flex items-center">
                     <Users className="w-4 h-4 mr-1" />
-                    <span>{course.students} students</span>
+                    <span>{course.students} estudiantes</span>
                   </div>
                 </div>
               </div>
             </div>
           ))}
+        </div>
+        
+        <div className="text-center mt-12">
+          <Link 
+            to="/academic-offer"
+            className="bg-gradient-to-r from-azure-200 to-azure-300 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200"
+          >
+            Ver Todas las Carreras
+          </Link>
         </div>
       </div>
     </section>
