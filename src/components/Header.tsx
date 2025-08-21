@@ -67,8 +67,8 @@ const Header: React.FC = () => {
                 </div>
               </div>
             </div>
-            <Link to="/courses" className="text-gray-700 hover:text-azure-400 px-3 py-2 text-sm font-medium">
-              Cursos
+            <Link to="/academic-offer" className="text-gray-700 hover:text-azure-400 px-3 py-2 text-sm font-medium">
+              Carreras
             </Link>
             <Link to="/events" className="text-gray-700 hover:text-azure-400 px-3 py-2 text-sm font-medium">
               Eventos

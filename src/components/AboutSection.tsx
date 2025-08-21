@@ -15,8 +15,8 @@ const AboutSection: React.FC = () => {
               {/* Main image container */}
               <div className="relative bg-gradient-to-br from-azure-300 via-azure-200 to-azure-400 rounded-full p-8 aspect-square flex items-center justify-center">
                 <img 
-                  src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=800" 
-                  alt="Professional educator" 
+                  src="/images/ceret.webp" 
+                  alt="Imagen Ceret" 
                   className="w-full h-full object-cover rounded-full"
                 />
               </div>

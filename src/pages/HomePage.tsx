@@ -16,8 +16,8 @@ const HomePage: React.FC = () => {
         <HeroSection />
         <FeaturesSection />
         <AboutSection />
-        <EventsSection />
         <CoursesSection />
+        <EventsSection />
         <TestimonialsSection />
       </main>
       <Footer />
