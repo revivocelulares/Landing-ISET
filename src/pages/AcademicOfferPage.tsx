@@ -1,77 +1,37 @@
 import React, { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
 import { GraduationCap, Clock, Users, Award, BookOpen } from 'lucide-react';
+import { techniciansData } from '../data/techniciansData';
 
 const AcademicOfferPage: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const careers = [
-    {
-      id: 1,
-      title: "Tecnicatura Superior en Petróleo y Gas",
-      duration: "3 años",
-      modality: "Presencial",
-      description: "Formación especializada en exploración, extracción y procesamiento de hidrocarburos, con enfoque en tecnologías modernas y seguridad industrial.",
-      subjects: ["Geología del Petróleo", "Perforación", "Producción", "Refinación"],
-      image: "https://images.pexels.com/photos/1108572/pexels-photo-1108572.jpeg?auto=compress&cs=tinysrgb&w=800"
-    },
-    {
-      id: 2,
-      title: "Tecnicatura Superior en Energías Renovables",
-      duration: "3 años",
-      modality: "Presencial",
-      description: "Capacitación en sistemas de energía solar, eólica y otras fuentes renovables, incluyendo instalación y mantenimiento.",
-      subjects: ["Energía Solar", "Energía Eólica", "Sistemas Fotovoltaicos", "Eficiencia Energética"],
-      image: "https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=800"
-    },
-    {
-      id: 3,
-      title: "Tecnicatura Superior en Mantenimiento Industrial",
-      duration: "3 años",
-      modality: "Presencial",
-      description: "Formación integral en mantenimiento preventivo y correctivo de equipos industriales, automatización y gestión de activos.",
-      subjects: ["Mantenimiento Preventivo", "Automatización", "Mecánica Industrial", "Gestión de Activos"],
-      image: "https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=800"
-    },
-    {
-      id: 4,
-      title: "Tecnicatura Superior en Producción Industrial de Alimentos",
-      duration: "3 años",
-      modality: "Presencial",
-      description: "Especialización en procesos de producción alimentaria, control de calidad, seguridad alimentaria y tecnología de alimentos.",
-      subjects: ["Tecnología de Alimentos", "Control de Calidad", "Seguridad Alimentaria", "Procesos Industriales"],
-      image: "https://images.pexels.com/photos/5591663/pexels-photo-5591663.jpeg?auto=compress&cs=tinysrgb&w=800"
-    },
-    {
-      id: 5,
-      title: "Tecnicatura Superior en Logística",
-      duration: "3 años",
-      modality: "Presencial",
-      description: "Formación en gestión de cadenas de suministro, almacenamiento, distribución y optimización de procesos logísticos.",
-      subjects: ["Cadena de Suministro", "Gestión de Inventarios", "Transporte", "Comercio Exterior"],
-      image: "https://images.pexels.com/photos/906494/pexels-photo-906494.jpeg?auto=compress&cs=tinysrgb&w=800"
-    },
-    {
-      id: 6,
-      title: "Tecnicatura Superior en Producción de Multimedios",
-      duration: "3 años",
-      modality: "Presencial",
-      description: "Capacitación en creación de contenido audiovisual, diseño gráfico, animación digital y producción multimedia.",
-      subjects: ["Diseño Gráfico", "Producción Audiovisual", "Animación Digital", "Marketing Digital"],
-      image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800"
-    },
-    {
-      id: 7,
-      title: "Tecnicatura Superior en Confección de Indumentaria y Productos Textiles",
-      duration: "3 años",
-      modality: "Presencial",
-      description: "Formación en diseño de moda, patronaje, confección industrial y gestión de la producción textil.",
-      subjects: ["Diseño de Moda", "Patronaje", "Confección Industrial", "Textiles Técnicos"],
-      image: "https://images.pexels.com/photos/3965545/pexels-photo-3965545.jpeg?auto=compress&cs=tinysrgb&w=800"
-    }
-  ];
+  const careers = techniciansData.map((tech, index) => ({
+    id: index + 1,
+    title: tech.title,
+    duration: tech.duration,
+    modality: tech.modality,
+    description: tech.description,
+    subjects: getSubjectsForTechnician(tech.id),
+    image: tech.image,
+    techId: tech.id
+  }));
+
+  function getSubjectsForTechnician(techId: string): string[] {
+    const subjectsMap: { [key: string]: string[] } = {
+      'petroleo-gas': ["Geología del Petróleo", "Perforación", "Producción", "Refinación"],
+      'energias-renovables': ["Energía Solar", "Energía Eólica", "Sistemas Fotovoltaicos", "Eficiencia Energética"],
+      'mantenimiento-industrial': ["Mantenimiento Preventivo", "Automatización", "Mecánica Industrial", "Gestión de Activos"],
+      'produccion-alimentos': ["Tecnología de Alimentos", "Control de Calidad", "Seguridad Alimentaria", "Procesos Industriales"],
+      'logistica': ["Cadena de Suministro", "Gestión de Inventarios", "Transporte", "Comercio Exterior"],
+      'produccion-multimedios': ["Diseño Gráfico", "Producción Audiovisual", "Animación Digital", "Marketing Digital"],
+      'confeccion-textil': ["Diseño de Moda", "Patronaje", "Confección Industrial", "Textiles Técnicos"]
+    };
+    return subjectsMap[techId] || [];
+  }
 
   const requirements = [
     "Título secundario completo",
@@ -187,9 +147,12 @@ const AcademicOfferPage: React.FC = () => {
                     </div>
                   </div>
                   
-                  <button className="w-full bg-gradient-to-r from-azure-200 to-azure-300 text-white py-3 rounded-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200">
+                  <Link 
+                    to={`/tecnicatura/${career.techId}`}
+                    className="block w-full bg-gradient-to-r from-azure-200 to-azure-300 text-white py-3 rounded-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200 text-center"
+                  >
                     Más Información
-                  </button>
+                  </Link>
                 </div>
               </div>
             ))}

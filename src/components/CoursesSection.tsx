@@ -7,7 +7,7 @@ const CoursesSection: React.FC = () => {
     {
       id: 1,
       title: "Tecnicatura Superior en Energías Renovables",
-      category: "Gestión de Proyectos",
+      category: "Enerías Renovables",
       image: "https://images.pexels.com/photos/433308/pexels-photo-433308.jpeg?auto=compress&cs=tinysrgb&w=800",
       rating: 4.8,
       students: 1234,
@@ -15,7 +15,7 @@ const CoursesSection: React.FC = () => {
     {
       id: 2,
       title: "Tecnicatura Superior en Producción Industrial de Alimentos",
-      category: "Desarrollo de Productos",
+      category: "Producción de Alimentos",
       image: "https://images.pexels.com/photos/5591663/pexels-photo-5591663.jpeg?auto=compress&cs=tinysrgb&w=800",
       rating: 4.9,
       students: 856,
@@ -23,7 +23,7 @@ const CoursesSection: React.FC = () => {
     {
       id: 3,
       title: "Tecnicatura Superior en Mantenimiento Industrial",
-      category: "Gestión de Equipos",
+      category: "Mantenimiento Industrial",
       image: "https://images.pexels.com/photos/1108101/pexels-photo-1108101.jpeg?auto=compress&cs=tinysrgb&w=800",
       rating: 4.7,
       students: 2341,

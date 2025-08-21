@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-gray-400 text-sm">
-            © Copyright 2024. All rights reserved.
+            © Copyright 2025. Todos los derechos reservados - ISET Nº 812 Ceret - Diseño y Desarrollo por Diego Ferreira.
           </div>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
