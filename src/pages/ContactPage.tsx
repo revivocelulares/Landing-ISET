@@ -176,7 +176,7 @@ const ContactPage: React.FC = () => {
                     Información de <span className="text-azure-400">Contacto</span>
                   </h2>
                   <p className="text-gray-600 text-lg leading-relaxed">
-                    Instituto Superior de Educación Tecnológica "Ing. Estela Miguel" - 
+                    Instituto Superior de Educación Tecnológica N°812 "Ing. Estela Miguel" - 
                     Centro de Referencia Tecnológica (CERET)
                   </p>
                 </div>
