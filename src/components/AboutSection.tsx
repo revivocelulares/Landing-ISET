@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const AboutSection: React.FC = () => {
   return (
@@ -52,10 +53,11 @@ const AboutSection: React.FC = () => {
                 <div className="text-sm text-gray-600">Estudiantes Satisfechos</div>
               </div>
             </div>
-
-            <button className="bg-gradient-to-r from-azure-200 to-azure-300 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200">
-              Lea más Sobre Nosotros
-            </button>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link to="/about" onClick={() => window.scrollTo(0, 0)} className="bg-gradient-to-r from-azure-200 to-azure-300 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200">
+                Lea más Sobre Nosotros
+              </Link>
+            </div>
           </div>
         </div>
       </div>
