@@ -64,6 +64,18 @@ const Header: React.FC = () => {
                   >
                     Bedelía
                   </Link>
+                  <Link 
+                    to="/bedelia" 
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-azure-100 hover:text-azure-600 transition-colors duration-150"
+                  >
+                    CIPE
+                  </Link>
+                  <Link 
+                    to="/bedelia" 
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-azure-100 hover:text-azure-600 transition-colors duration-150"
+                  >
+                    Centro de Estudiantes
+                  </Link>
                 </div>
               </div>
             </div>

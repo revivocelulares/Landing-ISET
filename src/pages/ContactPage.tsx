@@ -192,13 +192,13 @@ const ContactPage: React.FC = () => {
                       <p className="text-gray-600">
                         Av. del Libertador N°560<br />
                         Comodoro Rivadavia, Chubut<br />
-                        Argentina (9000)
+                        Argentina (U9000)
                       </p>
                     </div>
                   </div>
 
                   {/* Teléfono */}
-                  <div className="flex items-start space-x-4">
+                  {/*<div className="flex items-start space-x-4">
                     <div className="bg-azure-100 p-3 rounded-full">
                       <Phone className="w-6 h-6 text-azure-500" />
                     </div>
@@ -209,7 +209,7 @@ const ContactPage: React.FC = () => {
                         +54 297 446-4445
                       </p>
                     </div>
-                  </div>
+                  </div>*/}
 
                   {/* Email */}
                   <div className="flex items-start space-x-4">
@@ -233,8 +233,8 @@ const ContactPage: React.FC = () => {
                     <div>
                       <h3 className="font-semibold text-gray-900 mb-1">Horarios de Atención</h3>
                       <p className="text-gray-600">
-                        Lunes a Viernes: 8:00 - 20:00<br />
-                        Sábados: 8:00 - 12:00<br />
+                        Lunes a Viernes: 16:00 - 22:00<br />
+                        Sábados: Cerrado<br />
                         Domingos: Cerrado
                       </p>
                     </div>
@@ -422,7 +422,7 @@ const ContactPage: React.FC = () => {
                 Nuestra <span className="text-azure-400">Ubicación</span>
               </h2>
               <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                Nos encontramos en el corazón de Comodoro Rivadavia, fácilmente accesible desde cualquier punto de la ciudad.
+                Nos encontramos en el corazón del barrio General Mosconi (KM3) de Comodoro Rivadavia, fácilmente accesible desde cualquier punto de la ciudad.
               </p>
             </div>
             
