@@ -5,6 +5,7 @@ import AcademicOfferPage from './pages/AcademicOfferPage';
 import TechnicianDetailPage from './pages/TechnicianDetailPage';
 import ContactPage from './pages/ContactPage';
 import AboutPage from './pages/AboutPage';
+import EventsPage from './pages/EventsPage';
 import NotFoundPage from './pages/NotFoundPage';
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Route path="/tecnicatura/:id" element={<TechnicianDetailPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/about" element={<AboutPage />} />
+          <Route path="/events" element={<EventsPage />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>

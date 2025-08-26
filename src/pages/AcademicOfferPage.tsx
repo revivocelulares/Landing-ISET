@@ -48,7 +48,7 @@ const AcademicOfferPage: React.FC = () => {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-azure-50 to-azure-100 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center space-y-8">
+          <div className="text-center space-y-6">
             <div className="flex justify-center space-x-2 mb-6">
               <div className="w-0 h-0 border-l-8 border-r-0 border-b-8 border-l-azure-200 border-b-transparent"></div>
               <div className="w-0 h-0 border-l-8 border-r-0 border-b-8 border-l-azure-300 border-b-transparent"></div>
