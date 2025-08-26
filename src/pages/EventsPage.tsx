@@ -175,7 +175,7 @@ const EventsPage: React.FC = () => {
                   
                   {/* Action Button */}
                   <div className="mt-6">
-                    <button className="w-full bg-azure-500 hover:bg-azure-600 text-white font-semibold py-3 px-4 rounded-lg transition-colors duration-200">
+                    <button className="block w-full bg-gradient-to-r from-azure-200 to-azure-300 text-white py-3 rounded-lg font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200 text-center">
                       Más Información
                     </button>
                   </div>
