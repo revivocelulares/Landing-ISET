@@ -9,18 +9,25 @@ const AboutPage: React.FC = () => {
       <Header />
       <main className="flex-1">
         {/* Hero Section */}
-        <section className="relative bg-gradient-to-br from-azure-50 via-white to-azure-100 py-20 lg:py-32">
-          <div className="absolute inset-0 opacity-40">
-            <div className="w-full h-full bg-gradient-to-br from-azure-100/20 to-azure-200/10"></div>
-          </div>
-          
-          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Sobre Nosotros
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Conoce la historia, misión y visión del Instituto Superior de Educación Tecnológica N° 812 - CeRET
-            </p>
+        <section className="relative bg-gradient-to-br from-azure-50 to-azure-100 py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center space-y-6">
+              {/* Arrow indicators */}
+              <div className="flex justify-center space-x-2">
+                <div className="w-0 h-0 border-l-8 border-r-0 border-b-8 border-l-azure-200 border-b-transparent"></div>
+                <div className="w-0 h-0 border-l-8 border-r-0 border-b-8 border-l-azure-300 border-b-transparent"></div>
+                <div className="w-0 h-0 border-l-8 border-r-0 border-b-8 border-l-coral-400 border-b-transparent"></div>
+              </div>
+              
+              <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 leading-tight">
+                Sobre <span className="text-azure-400">Nosotros</span>
+              </h1>
+              
+              <p className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                Conoce la historia, misión y visión del Instituto Superior de Educación Tecnológica N° 812 - CeRET, 
+                una institución comprometida con la excelencia educativa y el desarrollo regional.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -30,7 +37,7 @@ const AboutPage: React.FC = () => {
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                  Nuestra Historia
+                  Nuestra <span className="text-azure-400">Historia</span>
                 </h2>
                 <div className="space-y-4 text-gray-600 leading-relaxed">
                   <p>
@@ -67,7 +74,7 @@ const AboutPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Misión y Visión
+                Misión y <span className="text-azure-400">Visión</span>
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
                 Nuestro compromiso con la excelencia educativa y el desarrollo regional
@@ -105,7 +112,7 @@ const AboutPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Nuestros Valores y Objetivos
+                Nuestros <span className="text-azure-400">Valores</span> y Objetivos
               </h2>
               <p className="text-gray-600 max-w-2xl mx-auto">
                 Los principios que guían nuestra labor educativa y nuestros objetivos institucionales
@@ -154,7 +161,7 @@ const AboutPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Objetivos Institucionales
+                Objetivos <span className="text-azure-400">Institucionales</span>
               </h2>
             </div>
             
@@ -208,7 +215,7 @@ const AboutPage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Reconocimiento y Calidad
+                Reconocimiento y <span className="text-azure-400">Calidad</span>
               </h2>
             </div>
             
