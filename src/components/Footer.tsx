@@ -1,5 +1,5 @@
 import React from 'react';
-import { Facebook, Twitter, Instagram } from 'lucide-react';
+import { Facebook, Instagram } from 'lucide-react';
 
 const Footer: React.FC = () => {
   return (
@@ -16,9 +16,12 @@ const Footer: React.FC = () => {
               />
             </div>
             <div className="flex justify-center md:justify-start space-x-4">
-              <Facebook className="w-5 h-5 text-gray-400 hover:text-blue-600 cursor-pointer transition-colors" />
-              <Twitter className="w-5 h-5 text-gray-400 hover:text-blue-400 cursor-pointer transition-colors" />
-              <Instagram className="w-5 h-5 text-gray-400 hover:text-pink-600 cursor-pointer transition-colors" />
+              <a href='https://www.facebook.com/ceretiset812' target="_blank" rel="noreferrer">
+                <Facebook className="w-5 h-5 text-gray-400 hover:text-blue-600 cursor-pointer transition-colors" />
+              </a>
+              <a href='https://www.instagram.com/iset_812.cr/' target="_blank" rel="noreferrer">
+                <Instagram className="w-5 h-5 text-gray-400 hover:text-pink-600 cursor-pointer transition-colors" />
+              </a>
             </div>
           </div>
 
