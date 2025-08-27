@@ -1,5 +1,6 @@
 import React from 'react';
 import { Facebook, Instagram } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   return (
@@ -27,23 +28,21 @@ const Footer: React.FC = () => {
 
           {/* About */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">About</h3>
+            <h3 className="text-lg font-semibold mb-4">Links Rápidos</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Our Story</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Team</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Careers</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Press</a></li>
+              <li><Link to="/" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-white transition-colors">Inicio</Link></li>
+              <li><Link to="/academic-offer" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-white transition-colors">Carreras</Link></li>
+              <li><Link to="/events" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-white transition-colors">Eventos</Link></li>
             </ul>
           </div>
 
           {/* Support */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Support</h3>
+            <h3 className="text-lg font-semibold mb-4">Soporte</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Help Center</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Community</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Contact Us</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Status</a></li>
+              <li><Link to="/help-center" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-white transition-colors">Centro de Ayuda</Link></li>
+              <li><Link to="/tutorials" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-white transition-colors">Tutoriales</Link></li>
+              <li><Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-white transition-colors">Contáctanos</Link></li>
             </ul>
           </div>
 
@@ -52,23 +51,17 @@ const Footer: React.FC = () => {
             <h3 className="text-lg font-semibold mb-4">FAQ</h3>
             <ul className="space-y-2">
               <li><a href="#" className="text-gray-400 hover:text-white transition-colors">General</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Courses</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Pricing</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Technical</a></li>
+              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Carreras</a></li>
             </ul>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+        <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-center items-center">
           <div className="text-gray-400 text-sm">
-            © Copyright 2025. Todos los derechos reservados - ISET Nº 812 Ceret - Diseño y Desarrollo por Diego Ferreira.
+            © Copyright 2025. Todos los derechos reservados - ISET Nº 812 Ceret - Diseño y Desarrollo por Diego Ferreira, responsable del Centro de Rcursos Tecnológicos.
           </div>
-          <div className="flex space-x-6 mt-4 md:mt-0">
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Privacy Policy</a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Terms of Service</a>
-            <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">Cookie Policy</a>
-          </div>
+          
         </div>
       </div>
     </footer>
