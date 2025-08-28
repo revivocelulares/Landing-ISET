@@ -33,6 +33,7 @@ const Footer: React.FC = () => {
               <li><Link to="/" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-white transition-colors">Inicio</Link></li>
               <li><Link to="/academic-offer" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-white transition-colors">Carreras</Link></li>
               <li><Link to="/events" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-white transition-colors">Eventos</Link></li>
+              <li><Link to="/organization-chart" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-white transition-colors">Organigrama</Link></li>
             </ul>
           </div>
 
@@ -50,8 +51,8 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">FAQ</h3>
             <ul className="space-y-2">
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">General</a></li>
-              <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Carreras</a></li>
+              <li><Link to="/faq-general" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-white transition-colors">General</Link></li>
+              <li><Link to="/faq-academic-offer" onClick={() => window.scrollTo(0, 0)} className="text-gray-400 hover:text-white transition-colors">Carreras</Link></li>
             </ul>
           </div>
         </div>
@@ -59,7 +60,7 @@ const Footer: React.FC = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-center items-center">
           <div className="text-gray-400 text-sm">
-            © Copyright 2025. Todos los derechos reservados - ISET Nº 812 Ceret - Diseño y Desarrollo por Diego Ferreira, responsable del Centro de Rcursos Tecnológicos.
+            © Copyright 2025. Todos los derechos reservados - <strong>ISET Nº 812 Ceret</strong> - Diseño y Desarrollo por Diego Ferreira, responsable del Centro de Rcursos Tecnológicos.
           </div>
           
         </div>

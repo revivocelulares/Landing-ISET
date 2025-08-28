@@ -1,9 +1,24 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
+import Modal, { ModalInfo } from './Modal';
+import { modalData } from '../data/modalData';
 
 const Header: React.FC = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedModalInfo, setSelectedModalInfo] = useState<ModalInfo | null>(null);
+
+  const handleModalOpen = (key: string) => {
+    setSelectedModalInfo(modalData[key]);
+    setIsModalOpen(true);
+    setIsDropdownOpen(false);
+  };
+
+  const handleModalClose = () => {
+    setIsModalOpen(false);
+    setSelectedModalInfo(null);
+  };
 
   return (
     <header className="bg-white shadow-sm border-b border-gray-100">
@@ -40,42 +55,42 @@ const Header: React.FC = () => {
                 onMouseLeave={() => setIsDropdownOpen(false)}
               >
                 <div className="py-2">
-                  <Link 
-                    to="/equipo-directivo" 
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-azure-100 hover:text-azure-600 transition-colors duration-150"
+                  <button 
+                    onClick={() => handleModalOpen('equipo-directivo')}
+                    className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-azure-100 hover:text-azure-600 transition-colors duration-150"
                   >
                     Equipo Directivo
-                  </Link>
-                  <Link 
-                    to="/coordinacion-academica" 
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-azure-100 hover:text-azure-600 transition-colors duration-150"
+                  </button>
+                  <button 
+                    onClick={() => handleModalOpen('coordinacion-academica')}
+                    className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-azure-100 hover:text-azure-600 transition-colors duration-150"
                   >
                     Coordinación Académica
-                  </Link>
-                  <Link 
-                    to="/area-administrativa" 
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-azure-100 hover:text-azure-600 transition-colors duration-150"
+                  </button>
+                  <button 
+                    onClick={() => handleModalOpen('area-administrativa')}
+                    className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-azure-100 hover:text-azure-600 transition-colors duration-150"
                   >
                     Área Administrativa
-                  </Link>
-                  <Link 
-                    to="/bedelia" 
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-azure-100 hover:text-azure-600 transition-colors duration-150"
+                  </button>
+                  <button 
+                    onClick={() => handleModalOpen('bedelia')}
+                    className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-azure-100 hover:text-azure-600 transition-colors duration-150"
                   >
                     Bedelía
-                  </Link>
-                  <Link 
-                    to="/cipe" 
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-azure-100 hover:text-azure-600 transition-colors duration-150"
+                  </button>
+                  <button 
+                    onClick={() => handleModalOpen('cipe')}
+                    className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-azure-100 hover:text-azure-600 transition-colors duration-150"
                   >
                     CIPE
-                  </Link>
-                  <Link 
-                    to="/centro-estudiantes" 
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-azure-100 hover:text-azure-600 transition-colors duration-150"
+                  </button>
+                  <button 
+                    onClick={() => handleModalOpen('centro-estudiantes')}
+                    className="block w-full text-left px-4 py-2 text-sm text-gray-700 hover:bg-azure-100 hover:text-azure-600 transition-colors duration-150"
                   >
                     Centro de Estudiantes
-                  </Link>
+                  </button>
                 </div>
               </div>
             </div>
@@ -105,6 +120,13 @@ const Header: React.FC = () => {
           </div>
         </div>
       </div>
+      
+      {/* Modal */}
+      <Modal 
+        isOpen={isModalOpen}
+        onClose={handleModalClose}
+        modalInfo={selectedModalInfo}
+      />
     </header>
   );
 };
