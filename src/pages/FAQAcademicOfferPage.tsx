@@ -78,7 +78,7 @@ const FAQAcademicOfferPage: React.FC = () => {
               <div className="text-center mt-6">
                 <a 
                   href="/academic-offer" 
-                  className="inline-flex items-center bg-gradient-to-r from-azure-200 to-azure-300 text-white px-6 py-3 rounded-full font-semibold hover:shadow-lg transform hover:scale-105 transition-all duration-200"
+                  className="inline-flex items-center text-azure-400 hover:text-azure-500 font-semibold transition-colors"
                 >
                   Ver Todas las Carreras
                   <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">

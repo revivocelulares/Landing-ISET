@@ -108,7 +108,7 @@ const HelpCenterPage: React.FC = () => {
             <Link
               to="/faq-general"
               onClick={() => window.scrollTo(0, 0)}
-              className="inline-flex items-center text-azure-600 hover:text-azure-700 font-semibold"
+              className="inline-flex items-center text-azure-400 hover:text-azure-500 font-semibold transition-colors"
             >
               Ver todas las preguntas frecuentes
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
