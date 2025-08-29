@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Clock, Users, BookOpen } from 'lucide-react';
+import { ArrowLeft, Clock, Users, BookOpen, Download } from 'lucide-react';
 import { getTechnicianById, TechnicianProgram } from '../data/techniciansData';
 
 interface TechnicianContent {
@@ -14,6 +14,37 @@ const TechnicianDetailPage: React.FC = () => {
   const [content, setContent] = useState<TechnicianContent | null>(null);
   const [loading, setLoading] = useState(true);
   const [activeTab, setActiveTab] = useState<'synthesis' | 'curriculum'>('synthesis');
+
+  // Función para obtener la URL del diseño curricular
+  const getCurriculumDesignUrl = (technicianId: string): string => {
+    const curriculumMap: { [key: string]: string } = {
+      'petroleo-gas': 'Diseño-Curricular-Petroleo-y-Gas-2015.pdf',
+      'energias-renovables': 'Diseño-Curricular-Energias-Renovables-2022.pdf',
+      'mantenimiento-industrial': 'Diseño-Curricular-Mantenimiento-Industrial-2015.pdf',
+      'produccion-alimentos': 'Diseño-Curricular-Alimentos-2017.pdf',
+      'logistica': 'Diseño-Curricular-Logistica-2022.pdf',
+      'produccion-multimedios': 'Diseño-Curricular-Multimedios-2022.pdf',
+      'confeccion-textil': 'Diseño-Curricular-Indumentaria-y-Textil-2019.pdf'
+    };
+    
+    const fileName = curriculumMap[technicianId];
+    return fileName ? `/docs/diseños-curriculares/${fileName}` : '';
+  };
+
+  // Función para manejar la descarga del diseño curricular
+  const handleDownloadCurriculum = () => {
+    if (technician) {
+      const url = getCurriculumDesignUrl(technician.id);
+      if (url) {
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = url.split('/').pop() || 'diseño-curricular.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+      }
+    }
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -198,7 +229,7 @@ const TechnicianDetailPage: React.FC = () => {
               <p className="text-xl text-azure-100 mb-8">
                 {technician.description}
               </p>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 mb-6">
                 <div className="flex items-center space-x-2 bg-azure-500 bg-opacity-50 rounded-lg px-4 py-2">
                   <Clock className="h-5 w-5" />
                   <span>{technician.duration}</span>
@@ -212,6 +243,15 @@ const TechnicianDetailPage: React.FC = () => {
                   <span>Título Oficial</span>
                 </div>
               </div>
+              
+              {/* Botón de descarga del diseño curricular */}
+              <button
+                onClick={handleDownloadCurriculum}
+                className="inline-flex items-center space-x-2 bg-white text-azure-400 hover:bg-azure-50 hover:text-azure-500 font-semibold py-3 px-6 rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105"
+              >
+                <Download className="h-5 w-5" />
+                <span>Descargar Diseño Curricular</span>
+              </button>
             </div>
             <div className="lg:text-right">
               <img 
