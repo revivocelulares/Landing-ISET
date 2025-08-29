@@ -76,15 +76,16 @@ const FAQAcademicOfferPage: React.FC = () => {
                 </div>
               </div>
               <div className="text-center mt-6">
-                <a 
-                  href="/academic-offer" 
+                <Link 
+                  to="/academic-offer"
+                  onClick={() => window.scrollTo(0, 0)} 
                   className="inline-flex items-center text-azure-400 hover:text-azure-500 font-semibold transition-colors"
                 >
                   Ver Todas las Carreras
                   <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
-                </a>
+                </Link>
               </div>
             </div>
             
