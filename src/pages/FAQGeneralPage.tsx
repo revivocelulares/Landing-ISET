@@ -3,6 +3,7 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import Accordion from '../components/Accordion';
 import { generalFAQData } from '../data/faqData';
+import { Link } from 'react-router-dom';
 
 const FAQGeneralPage: React.FC = () => {
   return (
@@ -80,15 +81,16 @@ const FAQGeneralPage: React.FC = () => {
               <p className="text-gray-600 mb-4">
                 ¿Buscas información específica sobre nuestras carreras?
               </p>
-              <a 
-                href="/faq-academic-offer" 
+              <Link 
+                to="/faq-academic-offer"
+                onClick={() => window.scrollTo(0, 0)} 
                 className="inline-flex items-center text-azure-400 hover:text-azure-500 font-semibold transition-colors"
               >
                 Ver FAQ de Oferta Académica
                 <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
