@@ -136,6 +136,7 @@ const HelpCenterPage: React.FC = () => {
               <Link
                 key={index}
                 to={resource.link}
+                onClick={() => window.scrollTo(0, 0)}
                 className="bg-white p-6 rounded-xl shadow-sm hover:shadow-md transition-shadow border border-azure-100 hover:border-azure-200 group"
               >
                 <div className="text-4xl mb-4">{resource.icon}</div>
@@ -186,7 +187,7 @@ const HelpCenterPage: React.FC = () => {
           <div className="text-center mt-12">
             <Link
               to="/contact"
-              className="bg-coral-500 text-white px-8 py-3 rounded-lg font-semibold hover:bg-coral-600 transition-colors inline-flex items-center"
+              className="inline-flex items-center text-azure-400 hover:text-azure-500 font-semibold transition-colors"
             >
               Ir a la página de contacto
               <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
